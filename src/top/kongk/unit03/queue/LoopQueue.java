@@ -133,7 +133,6 @@ public class LoopQueue<E> implements Queue<E> {
         stringBuilder.append("LoopQueue : front = ").append(front).append(" , tail = ").append(tail).append("\n");
         stringBuilder.append("[");
 
-
         for (int i = front; i != tail; i = (i + 1) % data.length) {
 
             stringBuilder.append(data[i]);

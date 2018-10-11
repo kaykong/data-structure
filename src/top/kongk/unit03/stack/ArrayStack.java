@@ -57,12 +57,15 @@ public class ArrayStack<E> implements Stack<E> {
 
         for (int i = array.getSize() - 1; i >= 0; --i) {
 
+            stringBuilder.append(i);
+
             if (i != 0) {
-                stringBuilder.append(i + ", ");
-            } else {
-                stringBuilder.append(i + "] end of stack");
+                stringBuilder.append(", ");
             }
         }
+
+        stringBuilder.append("] end of stack");
+
 
         return stringBuilder.toString();
     }

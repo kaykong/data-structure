@@ -187,7 +187,8 @@ public class Array<E> {
 
 
         /**
-         * 缩容: 在size等于数组容量的时候, 不断地add, remove
+         * 缩容: 在size等于数组容量的时候如果处理不当, 则会不断地add, remove
+         *
          * 因为扩容的时候是 2 倍扩容,
          * 如果缩容的条件再为 size == getCapacity() / 2 的话, 就会不断地扩容, 缩容...
          *
@@ -238,12 +239,14 @@ public class Array<E> {
 
         for (int i = 0; i < size; ++i) {
 
+            stringBuilder.append(data[i]);
+
             if (i != size - 1) {
-                stringBuilder.append(data[i]).append(", ");
-            } else {
-                stringBuilder.append(data[i]).append("]");
+                stringBuilder.append(", ");
             }
         }
+
+        stringBuilder.append("]");
 
         return stringBuilder.toString();
     }

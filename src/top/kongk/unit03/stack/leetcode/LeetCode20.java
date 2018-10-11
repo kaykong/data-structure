@@ -54,6 +54,10 @@ public class LeetCode20 {
 
 
     public static void main(String[] args) {
+
+        /**
+         * 测试一下
+         */
         LeetCode20 solution = new LeetCode20();
 
         boolean check = solution.isValid("asd[]{f");

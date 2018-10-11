@@ -52,12 +52,14 @@ public class ArrayQueue<E> implements Queue<E> {
 
         for (int i = 0; i < array.getSize(); ++i) {
 
+            stringBuilder.append(array.get(i));
+
             if (i != array.getSize() - 1) {
-                stringBuilder.append(array.get(i)).append(", ");
-            } else {
-                stringBuilder.append(array.get(i)).append("] tail");
+                stringBuilder.append(", ");
             }
         }
+
+        stringBuilder.append("] tail");
 
         return stringBuilder.toString();
     }
