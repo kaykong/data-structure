@@ -1,4 +1,4 @@
-package top.kongk.unit03.queue;
+package top.kongk.unit03.stackandqueue.queue;
 
 import java.util.Random;
 

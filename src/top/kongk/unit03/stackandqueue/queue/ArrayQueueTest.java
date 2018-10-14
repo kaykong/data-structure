@@ -1,4 +1,4 @@
-package top.kongk.unit03.queue;
+package top.kongk.unit03.stackandqueue.queue;
 
 /**
  * 描述：对ArrayQueue的测试

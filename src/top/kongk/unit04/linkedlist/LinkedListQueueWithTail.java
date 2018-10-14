@@ -1,6 +1,6 @@
 package top.kongk.unit04.linkedlist;
 
-import top.kongk.unit03.queue.Queue;
+import top.kongk.unit03.stackandqueue.queue.Queue;
 
 /**
  * 描述：带尾指针的 LinkedListQueue
@@ -8,6 +8,8 @@ import top.kongk.unit03.queue.Queue;
  * 在不带尾指针的 LinkedListQueue 中, 如果要入队, 需要使用 addLast() O(n) 的时间复杂度
  *
  * 稍加修改, 添加一个尾指针之后, 再入队, 仅需要 O(1)
+ *
+ * 入队使用尾指针，出队使用头指针，都是O(1)
  *
  * 在 ComparisionLinkedListAndArray 中测试10万次入队,出队, 时间上相差一百倍以上:
  *
@@ -44,7 +46,7 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
     }
 
     /**
-     * 不需要虚拟头节点
+     * 有一个虚拟头节点
      */
     private Node head;
     /**
@@ -126,11 +128,12 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
         stringBuilder.append("LinkedListQueueWithTail : Head [");
 
         Node node = head;
-        while (node != null) {
-            stringBuilder.append(node.e).append(" -> ");
-            node = node.next;
+        if (size != 0) {
+            while (node != null) {
+                stringBuilder.append(node.e).append(" -> ");
+                node = node.next;
+            }
         }
-
         stringBuilder.append("Null]");
 
         return stringBuilder.toString();

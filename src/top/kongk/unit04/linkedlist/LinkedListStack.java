@@ -1,6 +1,6 @@
 package top.kongk.unit04.linkedlist;
 
-import top.kongk.unit03.stack.Stack;
+import top.kongk.unit03.stackandqueue.stack.Stack;
 
 /**
  * 描述：链表实现的栈

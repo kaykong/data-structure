@@ -1,4 +1,4 @@
-package top.kongk.unit03.queue;
+package top.kongk.unit03.stackandqueue.queue;
 
 import top.kongk.unit02.array.Array;
 /**

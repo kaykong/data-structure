@@ -1,6 +1,6 @@
 package top.kongk.unit04.linkedlist;
 
-import top.kongk.unit03.queue.Queue;
+import top.kongk.unit03.stackandqueue.queue.Queue;
 
 /**
  * 描述：链表队列

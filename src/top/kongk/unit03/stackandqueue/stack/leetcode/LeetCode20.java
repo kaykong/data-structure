@@ -1,4 +1,4 @@
-package top.kongk.unit03.stack.leetcode;
+package top.kongk.unit03.stackandqueue.stack.leetcode;
 
 /**
  * 描述：LeetCode 20 号题目 括号是否匹配

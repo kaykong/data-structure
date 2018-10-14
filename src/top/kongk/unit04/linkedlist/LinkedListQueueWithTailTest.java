@@ -10,6 +10,7 @@ public class LinkedListQueueWithTailTest {
     public static void main(String[] args) {
 
         LinkedListQueueWithTail<Integer> linkedListQueueWithTail = new LinkedListQueueWithTail<>();
+        System.out.println(linkedListQueueWithTail);
 
         System.out.println("将数字 0-3 入队");
         for (int i = 0; i < 4; ++i) {
@@ -20,8 +21,10 @@ public class LinkedListQueueWithTailTest {
         System.out.println();
 
         System.out.println("出队: " + linkedListQueueWithTail.getFront());
-        linkedListQueueWithTail.dequeue();
-        System.out.println(linkedListQueueWithTail);
+        while (!linkedListQueueWithTail.isEmpty()) {
+            linkedListQueueWithTail.dequeue();
+            System.out.println(linkedListQueueWithTail);
+        }
     }
 
     /*
