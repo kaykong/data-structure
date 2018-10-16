@@ -46,11 +46,11 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
     }
 
     /**
-     * 有一个虚拟头节点
+     * 头节点
      */
     private Node head;
     /**
-     * 尾指针
+     * 尾节点
      */
     private Node tail;
 
@@ -60,8 +60,8 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
     private int size;
 
     public LinkedListQueueWithTail() {
-        head = new Node();
-        tail = head;
+        head = null;
+        tail = null;
     }
 
     @Override
@@ -76,17 +76,17 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
 
     @Override
     public void enqueue(E e) {
-        /*
-         * 入队从tail那里入队
-         */
-        if (!isEmpty()) {
-            //如果不是是空队列
-            Node node = new Node(e);
-            tail.next = node;
-            tail = node;
-        } else {
 
-            tail.e = e;
+        /*
+         * 从tail入队
+         */
+        if (isEmpty()) {
+            //空队列
+            tail = new Node(e);
+            head = tail;
+        } else {
+            tail.next = new Node(e);
+            tail = tail.next;
         }
 
         ++size;
@@ -96,7 +96,7 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
     public E dequeue() {
 
         /*
-         * 出队要从 head 出队
+         * 从 head 出队
          */
         if (isEmpty()) {
             throw new IllegalArgumentException("队列是空的");
@@ -105,6 +105,7 @@ public class LinkedListQueueWithTail<E> implements Queue<E> {
             Node node = head;
             head = node.next;
             node.next = null;
+
             --size;
 
             return node.e;

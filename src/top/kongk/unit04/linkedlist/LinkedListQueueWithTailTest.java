@@ -25,6 +25,20 @@ public class LinkedListQueueWithTailTest {
             linkedListQueueWithTail.dequeue();
             System.out.println(linkedListQueueWithTail);
         }
+
+        System.out.println("将数字 100-104 入队");
+        for (int i = 100; i < 105; ++i) {
+
+            linkedListQueueWithTail.enqueue(i);
+            System.out.println(linkedListQueueWithTail);
+        }
+        System.out.println();
+
+        System.out.println("出队: " + linkedListQueueWithTail.getFront());
+        while (!linkedListQueueWithTail.isEmpty()) {
+            linkedListQueueWithTail.dequeue();
+            System.out.println(linkedListQueueWithTail);
+        }
     }
 
     /*
